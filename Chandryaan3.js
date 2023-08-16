@@ -49,4 +49,26 @@ class Chandrayaan3 {
         break;
     }
   }
+  rotateLeft() {
+    switch (this.direction) {
+      case "N":
+        this.direction = "W";
+        break;
+      case "S":
+        this.direction = "E";
+        break;
+      case "E":
+        this.direction = "N";
+        break;
+      case "W":
+        this.direction = "S";
+        break;
+      case "Up":
+        this.direction = "N";
+        break;
+      case "Down":
+        this.direction = "S";
+        break;
+    }
+  }
 }
