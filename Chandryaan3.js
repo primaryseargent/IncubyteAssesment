@@ -102,4 +102,10 @@ class Chandrayaan3 {
       this.direction = 'Up';
     }
   }
+  //function for down command
+  adjustAngleDown() {
+    if (this.direction === 'N' || this.direction === 'S' || this.direction === 'E' || this.direction === 'W') {
+      this.direction = 'Down';
+    }
+  }
 }
