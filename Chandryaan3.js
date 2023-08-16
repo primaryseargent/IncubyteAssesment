@@ -145,9 +145,12 @@ class Chandrayaan3 {
     }
   }
 }
+
 // Example usage
 const chandrayaan = new Chandrayaan3(0, 0, 0, "N");
 const commands = ["f", "r", "u", "b", "l"];
 chandrayaan.processCommands(commands);
 console.log("Final Position:", chandrayaan.position);
 console.log("Final Direction:", chandrayaan.direction);
+
+module.exports = Chandrayaan3;
