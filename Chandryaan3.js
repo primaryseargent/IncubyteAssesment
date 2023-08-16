@@ -49,6 +49,7 @@ class Chandrayaan3 {
         break;
     }
   }
+  //function to rotate left
   rotateLeft() {
     switch (this.direction) {
       case "N":
@@ -71,6 +72,8 @@ class Chandrayaan3 {
         break;
     }
   }
+
+  //function to rotate right
   rotateRight() {
     switch (this.direction) {
       case "N":
@@ -91,6 +94,12 @@ class Chandrayaan3 {
       case "Down":
         this.direction = "N";
         break;
+    }
+  }
+  //function for up command
+  adjustAngleUp() {
+    if (this.direction === 'N' || this.direction === 'S' || this.direction === 'E' || this.direction === 'W') {
+      this.direction = 'Up';
     }
   }
 }
