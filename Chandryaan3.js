@@ -98,14 +98,50 @@ class Chandrayaan3 {
   }
   //function for up command
   adjustAngleUp() {
-    if (this.direction === 'N' || this.direction === 'S' || this.direction === 'E' || this.direction === 'W') {
-      this.direction = 'Up';
+    if (
+      this.direction === "N" ||
+      this.direction === "S" ||
+      this.direction === "E" ||
+      this.direction === "W"
+    ) {
+      this.direction = "Up";
     }
   }
   //function for down command
   adjustAngleDown() {
-    if (this.direction === 'N' || this.direction === 'S' || this.direction === 'E' || this.direction === 'W') {
-      this.direction = 'Down';
+    if (
+      this.direction === "N" ||
+      this.direction === "S" ||
+      this.direction === "E" ||
+      this.direction === "W"
+    ) {
+      this.direction = "Down";
+    }
+  }
+
+//   function for process command
+  processCommands(commands) {
+    for (const command of commands) {
+      switch (command) {
+        case "f":
+          this.moveForward();
+          break;
+        case "b":
+          this.moveBackward();
+          break;
+        case "l":
+          this.rotateLeft();
+          break;
+        case "r":
+          this.rotateRight();
+          break;
+        case "u":
+          this.adjustAngleUp();
+          break;
+        case "d":
+          this.adjustAngleDown();
+          break;
+      }
     }
   }
 }
