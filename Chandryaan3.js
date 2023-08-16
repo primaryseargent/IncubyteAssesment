@@ -119,7 +119,7 @@ class Chandrayaan3 {
     }
   }
 
-//   function for process command
+  //   function for process command
   processCommands(commands) {
     for (const command of commands) {
       switch (command) {
@@ -145,3 +145,9 @@ class Chandrayaan3 {
     }
   }
 }
+// Example usage
+const chandrayaan = new Chandrayaan3(0, 0, 0, "N");
+const commands = ["f", "r", "u", "b", "l"];
+chandrayaan.processCommands(commands);
+console.log("Final Position:", chandrayaan.position);
+console.log("Final Direction:", chandrayaan.direction);
